@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 import { sendResponse } from '../utils';
 import { createLogObject, logger } from '../utils/logger';
 import { fetchTransaction, transaction } from '../service/transaction';
-const fs = require('file-system');
+// const fs = require('file-system');
 
 export const createNewTransaction =async (req:Request, res:Response, next:NextFunction) => {
     try{

@@ -3,7 +3,7 @@ import express from 'express';
 import validate from '../middlewares/schemaValidation';
 import { createServiceSchema } from '../middlewares/schemaValidation/schemas';
 import { newServiceRequest } from '../controller/service-request';
-import { getTransactionRecords, createNewTransaction } from '../controller/transaction';
+import { getTransactionRecords } from '../controller/transaction';
 
 import multer from 'multer';
 
@@ -33,7 +33,7 @@ const router: express.Router = express.Router();
 
 router.get('/api/bank-details',getBankDetails);
 router.get('/api/getTransactions',getTransactionRecords);
-router.post('/api/create-transaction', upload.single('transactionScreenShot') ,createNewTransaction);
+// router.post('/api/create-transaction', upload.single('transactionScreenShot') ,createNewTransaction);
 router.post('/api/new-service-request',validate(createServiceSchema),newServiceRequest);
 
 export default router;

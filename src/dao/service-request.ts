@@ -12,7 +12,7 @@ export const createServiceRequest =async (data:any) => {
             customerName: data.customerName,
             customerEmail: data.customerEmail,
             customerPhone: data.customerPhone,
-            service: data.service
+            service: data .service
         })
 
         return daoResponse(true,dbResponse,'')
